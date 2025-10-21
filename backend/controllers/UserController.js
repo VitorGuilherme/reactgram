@@ -38,7 +38,7 @@ const register = async (req, res) => {
   // If user was created successfully, return the token
   if (!newUser) {
     res.status(422).json({
-      errors: ["Houve um erro, por favor tente novamente mais tarde"],
+      errors: ["Ocorreu um erro, por favor tente novamente mais tarde"],
     });
   }
 
@@ -73,7 +73,15 @@ const login = async (req, res) => {
   });
 };
 
+// Get current logged in user
+const getCurrentUser = async (req, res) => {
+  const user = req.user;
+
+  res.status(200).json(user);
+};
+
 module.exports = {
   register,
   login,
+  getCurrentUser,
 };
