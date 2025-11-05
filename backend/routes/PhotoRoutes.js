@@ -11,6 +11,7 @@ const {
   updatePhoto,
   likePhoto,
   commentPhoto,
+  searchPhoto,
 } = require("../controllers/PhotoController");
 
 // Middlewares
@@ -35,7 +36,9 @@ router.post(
 router.delete("/:id", authGuard, deletePhoto);
 router.get("/", authGuard, getAllPhotos);
 router.get("/user/:id", authGuard, getUserPhotos);
+router.get("/search", authGuard, searchPhoto);
 router.get("/:id", authGuard, getPhotoById);
+
 router.put("/:id", authGuard, photoUpdateValidation(), updatePhoto);
 router.put("/like/:id", authGuard, likePhoto);
 router.put(
