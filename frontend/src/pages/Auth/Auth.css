@@ -1,0 +1,54 @@
+#login,
+#register {
+  border: 1px solid #2b2b2b;
+  background: linear-gradient(135deg, #1a001f, #3a0ca3);
+  padding: 1.5em 2em;
+  max-width: 33%;
+  margin: 2em auto;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+/* Títulos */
+#login h2,
+#register h2 {
+  text-align: center;
+  font-size: 2.1em;
+}
+
+/* Subtítulo */
+.subtitle {
+  font-weight: bold;
+  color: #b5b5b5;
+  margin-bottom: 1.5em;
+}
+
+/* Formulário */
+#login form,
+#register form {
+  padding-bottom: 1.5em;
+  margin-bottom: 1.5em;
+  border-bottom: 1px solid #2b2b2b;
+}
+
+/* Parágrafos */
+#login p,
+#register p {
+  text-align: center;
+}
+
+/* Links */
+#login p a,
+#register p a {
+  font-weight: bold;
+  color: #a35eff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+#login p a:hover,
+#register p a:hover {
+  color: #c77dff;
+  text-shadow: 0 0 6px #a35eff;
+}

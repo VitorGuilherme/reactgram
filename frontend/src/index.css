@@ -1,23 +1,38 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  background-color: #121212;
-  color: #fafafa;
+  background: linear-gradient(135deg, #0f0015, #1b0133);
+  color: #f3f3f3;
+  min-height: 100vh;
 }
 
 a {
-  color: #fafafa;
+  color: #c77dff;
   text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #e0aaff;
+  text-shadow: 0 0 8px #c77dff;
 }
 
 .active {
   font-weight: bold;
+  color: #d0aaff;
 }
 
 ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 form {
@@ -34,18 +49,29 @@ label {
 label span {
   font-weight: bold;
   margin-bottom: 0.5em;
-  color: #aaa;
-  font-size: 0.7em;
+  color: #b5b5b5;
+  font-size: 0.8em;
 }
 
-input {
-  background-color: #3b3b3b;
-  color: #aaa;
-  border: 1px solid #555;
-  border-radius: 2px;
+input,
+textarea,
+select {
+  background-color: #24122e;
+  color: #ddd;
+  border: 1px solid #4b2e5f;
+  border-radius: 6px;
   padding: 10px 8px;
   outline: none;
-  margin-bottom: 0.6em;
+  margin-bottom: 0.8em;
+  font: inherit;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #9d4edd;
+  box-shadow: 0 0 6px rgba(157, 78, 221, 0.4);
 }
 
 input::placeholder {
@@ -55,33 +81,39 @@ input::placeholder {
 .btn,
 button,
 input[type="submit"] {
-  background-color: #0094f6;
+  background: linear-gradient(135deg, #6d28d9, #9d4edd);
   color: #fff;
   border: none;
-  border-radius: 4px;
-  padding: 10px 8px;
+  border-radius: 8px;
+  padding: 10px 12px;
   font-weight: bold;
   cursor: pointer;
-  opacity: 0.8;
+  opacity: 0.9;
   font-size: 1em;
+  transition: opacity 0.3s ease, transform 0.2s ease;
 }
 
 input[type="submit"] {
   margin-top: 1em;
 }
 
-input:disabled {
-  cursor: not-allowed;
-  background-color: #000;
-}
-
-buton:hover,
+.btn:hover,
+button:hover,
 input[type="submit"]:hover {
   opacity: 1;
+  transform: translateY(-1px);
+}
+
+input:disabled,
+button:disabled {
+  cursor: not-allowed;
+  background-color: #2a1c39;
+  opacity: 0.6;
 }
 
 .cancel-btn {
-  background-color: #ccc;
+  background-color: #555;
+  color: #f3f3f3;
 }
 
 .hide {

@@ -1,8 +1,80 @@
 #footer {
-  background-color: #121212;
-  height: 200px;
+  background: linear-gradient(135deg, #1a001f, #3a0ca3);
+  padding: 2em 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid #363636;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ddd;
+  text-align: center;
+  font-size: 0.9em;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.3);
+}
+
+#footer p {
+  margin: 0.3em 0;
+  color: #b5b5b5;
+}
+
+#footer strong {
+  color: #d7bfff;
+}
+
+/* Ícones sociais */
+.social-icons {
+  display: flex;
+  gap: 1.2em;
+  margin-top: 1em;
+}
+
+.social-icons a {
+  color: #c77dff;
+  font-size: 1.8em;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icons a:hover {
+  color: #e0aaff;
+  transform: scale(1.1);
+}
+
+/* Stack de tecnologias */
+.tech-stack {
+  margin-top: 1.5em;
+}
+
+.tech-stack p {
+  font-weight: bold;
+  color: #c3b3f5;
+  margin-bottom: 0.5em;
+}
+
+.tech-icons {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+}
+
+.tech-icons svg {
+  font-size: 2em;
+  color: #c77dff;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.tech-icons svg:hover {
+  color: #e0aaff;
+  transform: scale(1.1);
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .social-icons svg,
+  .tech-icons svg {
+    font-size: 1.5em;
+  }
+
+  .tech-stack p {
+    font-size: 0.85em;
+  }
 }
