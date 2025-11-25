@@ -1,0 +1,30 @@
+.message {
+  padding: 8px 0;
+  margin: 1em auto;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.95em;
+  animation: fadeIn 0.3s ease forwards;
+  letter-spacing: 0.3px;
+}
+
+/* Erro minimalista */
+.message.error {
+  color: #ff6b6b; /* vermelho mais soft */
+}
+
+/* Sucesso minimalista */
+.message.success {
+  color: #4be36a; /* verde vibrante porém menos neon */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -133,10 +133,35 @@ const getUserById = async (req, res) => {
   }
 };
 
+const getAllUsers = async (req, res) => {
+  try {
+    const users = await User.find().select("-password");
+    return res.status(200).json(users);
+  } catch (error) {
+    return res.status(500).json({ errors: ["Erro ao buscar usuários!"] });
+  }
+};
+
+const deleteUser = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const user = await User.findByIdAndDelete(id);
+    if (!user) {
+      return res.status(404).json({ errors: ["Usuário não encontrado!"] });
+    }
+    return res.status(200).json({ message: "Usuário deletado com sucesso!" });
+  } catch (error) {
+    return res.status(500).json({ errors: ["Erro ao deletar usuário!"] });
+  }
+};
+
 module.exports = {
   register,
   login,
   getCurrentUser,
   update,
   getUserById,
+  getAllUsers,
+  deleteUser,
 };
